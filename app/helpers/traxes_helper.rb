@@ -1,0 +1,2 @@
+module TraxesHelper
+end

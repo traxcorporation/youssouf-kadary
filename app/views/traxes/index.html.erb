@@ -1,0 +1,27 @@
+<h1>Listing traxes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Description</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @traxes.each do |trax| %>
+      <tr>
+        <td><%= trax.nom %></td>
+        <td><%= trax.description %></td>
+        <td><%= link_to 'Show', trax %></td>
+        <td><%= link_to 'Edit', edit_trax_path(trax) %></td>
+        <td><%= link_to 'Destroy', trax, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Trax', new_trax_path %>

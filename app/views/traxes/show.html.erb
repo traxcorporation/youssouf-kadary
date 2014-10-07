@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @trax.nom %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @trax.description %>
+</p>
+
+<%= link_to 'Edit', edit_trax_path(@trax) %> |
+<%= link_to 'Back', traxes_path %>
